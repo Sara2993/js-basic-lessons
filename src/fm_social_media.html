@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="stylesheet" href="fm_social_media.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>fm social media dashboard</title>
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+</head>
+<body>
+
+  <div class="background"></div>
+
+  <div class="content">
+
+    <div id="dashboard" class="container">
+      <section class="cards">
+        <div class="header">
+          <div>
+            <h1>
+              Social Media Dashboard
+            </h1>
+            <span class="sub-heading">
+              Total Followers: 24,000
+            </span>
+          </div>
+          <div class="hr"></div>
+          <div class="theme-switch-wrapper">
+            <span>Dark Mode</span>
+            <label class="theme-switch" for="checkbox">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round"></div>
+            </label>
+          </div>
+        </div>
+
+        <article class="card fb">
+          <div class="card-border"></div>  
+          <div class="user">
+            <span class="icon"></span>
+            <span class="handle">
+              @nathanf
+            </span>
+          </div>
+          <div class="influence">
+            1980
+            <span>Followers</span>
+          </div>
+          <span class="recent up">
+            10 Today
+          </span>
+        </article>
+        <article class="card tw">
+          <div class="card-border"></div>  
+          <div class="user">
+            <span class="icon"></span>
+            <span class="handle">
+              @nathanf
+            </span>
+          </div>
+          <div class="influence">
+            1060
+            <span>Followers</span>
+          </div>
+          <span class="recent up">
+            87 Today
+          </span>
+        </article>
+        <article class="card ig">
+          <div class="card-border"></div>  
+          <div class="user">
+            <span class="icon"></span>
+            <span class="handle">
+              @realnathanf
+            </span>
+          </div>
+          <div class="influence">
+            18k
+            <span>Followers</span>
+          </div>
+          <span class="recent up">
+            1200 Today
+          </span>
+        </article>
+        <article class="card yt">
+          <div class="card-border"></div>  
+          <div class="user">
+            <span class="icon"></span>
+            <span class="handle">
+              Nathan F.
+            </span>
+          </div>
+          <div class="influence">
+            9856
+            <span>Subscribers</span>
+          </div>
+          <span class="recent down">
+            200 Today
+          </span>
+        </article>
+      </section>
+    </div>
+   
+    <div id="overview" class="container">
+      <section class="cards">
+        <div class="header">
+          <h2>
+            Overview - Today
+          </h1>
+        </div>
+        <article class="card grid fb">
+            <div class="property faded">
+              Page Views
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              98
+            </div>
+            <span class="percent-change up">
+              5%
+            </span>
+        </article>
+        <article class="card grid fb">
+            <div class="property faded">
+              Likes
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              67
+            </div>
+            <span class="percent-change down">
+              3%
+            </span>
+        </article>
+        <article class="card grid ig">
+            <div class="property faded">
+              Likes
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              6780
+            </div>
+            <span class="percent-change up">
+              3212%
+            </span>
+      </article>
+        <article class="card grid ig">
+            <div class="property faded">
+              Profile Views
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              62k
+            </div>
+            <span class="percent-change up">
+              1435%
+            </span>
+      </article>
+        <article class="card grid tw">
+            <div class="property faded">
+              Retweets
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              120
+            </div>
+            <span class="percent-change up">
+              330%
+            </span>
+      </article>
+        <article class="card grid tw">
+            <div class="property faded">
+              Likes
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              550
+            </div>
+            <span class="percent-change up">
+              529%
+            </span>
+      </article>
+        <article class="card grid yt">
+            <div class="property faded">
+              Likes
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              110
+            </div>
+            <span class="percent-change down">
+              18%
+            </span>
+      </article>
+        <article class="card grid yt">
+            <div class="property faded">
+              Total Views
+            </div>
+            <div class="icon"></div>
+            <div class="value">
+              1450
+            </div>
+            <span class="percent-change down">
+              11%
+            </span>
+      </article>
+      </section>
+    </div>
+
+  </div>
+  
+</body>
+<script src="fm_social_media.js"></script>
+</html>
