@@ -1,13 +1,10 @@
 const left = document.getElementById('left');
 const right = document.getElementById('right');
 const slider = document.getElementById('slider');
-
 const header = document.getElementById('header');
 const para = document.getElementById('para');
-
 const states = ['first', 'second', 'third'];
 let clicked = false;
-
 setInterval(() => {
     if (!clicked) {
         slider.classList.replace(slider.getAttribute('class'),
@@ -15,7 +12,6 @@ setInterval(() => {
             changeText();
     }
 }, 5000)
-
 right.onclick = () => {
     clicked = true;
     if (clicked) {
@@ -25,7 +21,6 @@ right.onclick = () => {
         states[(states.indexOf(slider.getAttribute('class')) + 1) % 3])
         changeText();
 }
-
 left.onclick = () => {
     clicked = true;
     if (clicked) {
@@ -38,7 +33,6 @@ left.onclick = () => {
     slider.classList.replace(slider.getAttribute('class'), states[n]);
     changeText();
 }
-
 function changeText() {
     let state = slider.getAttribute('class');
     if (state === 'first') {
@@ -58,28 +52,23 @@ function changeText() {
         experience in this industry, we understand what customers want for their home and office.`
     }
 }
-
 const menuIcon = document.getElementById('menu-icon');
 const menu = document.querySelector('.menu');
 const closeIcon = document.getElementById('close');
 const filter = document.querySelector('.filter');
-
 menuIcon.onclick = () => {
     menu.classList.add('active');
     filter.style.opacity = '1';
     filter.style['pointer-events'] = 'all';
 }
-
 closeIcon.onclick = () => {
     menu.classList.remove('active');
     filter.style.opacity = '0';
     filter.style['pointer-events'] = 'none';
 }
-
 const photos = document.querySelectorAll('.slider>ul img');
 const imagesDesk = ['./desk-1.jpg', './desk-2.jpg', './desk-3.jpg'];
 const imagesMobile = ['./mobile-1.jpg', './mobile-2.jpg', './mobile-3.jpg'];
-
 function setImages() {
     let n = 0;
     if (document.body.clientWidth >= 700) {
@@ -94,7 +83,5 @@ function setImages() {
         })
     }
 };
-
 window.onresize = setImages;
-
 setImages();

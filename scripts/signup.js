@@ -1,11 +1,5 @@
-/* eslint-disable quotes */
-/* eslint-disable space-before-function-paren */
-/* eslint-disable semi */
-/* eslint-disable indent */
 const form = document.getElementsByTagName("form")[0];
-
 form.setAttribute("novalidate", "");
-
 form.addEventListener("submit", (event) => {
   if (
     !fName.validity.valid ||
@@ -17,23 +11,18 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
   }
 });
-
 const fName = document.getElementById("fname");
 const fNameError = document.querySelector(".first-name .error");
 const fNameErrorImg = document.querySelector(".first-name .wrapper-errorimg");
-
 const lName = document.getElementById("lname");
 const lNameError = document.querySelector(".last-name .error");
 const lNameErrorImg = document.querySelector(".last-name .wrapper-errorimg");
-
 const email = document.getElementById("email");
 const emailError = document.querySelector(".email .error");
 const emailErrorImg = document.querySelector(".email .wrapper-errorimg");
-
 const password = document.getElementById("password");
 const passwordError = document.querySelector(".password .error");
 const passwordErrorImg = document.querySelector(".password .wrapper-errorimg");
-
 function showError() {
   if (!fName.validity.valid) {
     if (fName.validity.valueMissing) {
@@ -43,7 +32,6 @@ function showError() {
     fNameErrorImg.classList.toggle("active", true);
     fName.classList.toggle("active", true);
   }
-
   if (!lName.validity.valid) {
     if (lName.validity.valueMissing) {
       lNameError.textContent = "Last Name cannot be empty";
@@ -52,7 +40,6 @@ function showError() {
     lNameErrorImg.classList.toggle("active", true);
     lName.classList.toggle("active", true);
   }
-
   if (!email.validity.valid) {
     if (email.validity.valueMissing) {
       emailError.textContent = "Email cannot be empty";
@@ -63,7 +50,6 @@ function showError() {
     emailErrorImg.classList.toggle("active", true);
     email.classList.toggle("active", true);
   }
-
   if (!password.validity.valid) {
     if (password.validity.valueMissing) {
       passwordError.textContent = "Password cannot be empty";

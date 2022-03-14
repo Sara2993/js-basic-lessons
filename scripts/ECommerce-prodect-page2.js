@@ -1,7 +1,6 @@
 let currentSlide = 0  
 const slides = document.querySelectorAll('.slides')
 const thumbnails = document.querySelectorAll('#thumb')
-
 const showSlides=(n)=> {
     slides.forEach((slide) => {
         slide.style.display = "none"
@@ -13,7 +12,6 @@ const showSlides=(n)=> {
     thumbnails[n].classList.add('active')
 }
 document.addEventListener("DOMContentLoaded", showSlides(currentSlide))
-
 thumbnails.forEach((thumbnail, i) => {
     thumbnail.addEventListener("click", () => {
       console.log(currentSlide)
@@ -21,42 +19,30 @@ thumbnails.forEach((thumbnail, i) => {
       currentSlide = i
     })
   })
-
   const nextSlide = () => {
     currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
     showSlides(currentSlide)
   }
-  
   const prevSlide = () => {
     currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
     showSlides(currentSlide)
   }
-  
   document.getElementById("next").addEventListener('click', nextSlide)
   document.getElementById("prev").addEventListener('click', prevSlide)
-
-
 function openLightbox() {
   document.getElementById("lightbox").style.display = "block";
 }
-
 function closeModal() {
   document.getElementById("lightbox").style.display = "none";
 }
-
 var slideIndex = 1;
 showImages(slideIndex);
-
-
 function plusSlides(n) {
     showImages(slideIndex += n);
   }
-
-
   function currentImg(n) {
     showImages(slideIndex = n);
   }
-
   function showImages(n) {
     var i;
     var slides = document.getElementsByClassName("mySlides");

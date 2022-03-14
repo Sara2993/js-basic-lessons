@@ -1,263 +1,216 @@
 :root {
-    --text-dark-color: #151F29;
-    --text-light-color: #969696;
-    --button-color: #4F7DF3;
-    --light-border-color: #C2D3FF;
-    --error-color: #FF5263;
-    --main-font: 'Libre Franklin', sans-serif;
-  }
-  
+      --button-color: #4F7DF3;
+      --error-color: #FF5263;
+      --light-border-color: #C2D3FF;
+      --main-font: 'Libre Franklin', sans-serif;
+      --text-dark-color: #151F29;
+      --text-light-color: #969696;
+  }  
   html {
-    font-family: var(--main-font);
-  }
-  
+      font-family: var(--main-font);
+  }  
   a {
-    text-decoration: none;
-  }
-  
+      text-decoration: none;
+  }  
   header, section, .input-container, footer, .social-icons, .icons-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+  }  
   header {
-    width: 100%;
-    height: 11rem;
-    padding-bottom: 1rem;
-    justify-content: flex-end;
-  }
-  
+      height: 11rem;
+      justify-content: flex-end;
+      padding-bottom: 1rem;
+      width: 100%;
+  }  
   .logo {
-    width: 5.4rem;
-    height: 1.5rem;
-  }
-  
+      height: 1.5rem;
+      width: 5.4rem;
+  }  
   section {
-    padding: 3.5rem 0 11rem;
-    justify-content: center;
-  }
-  
+      justify-content: center;
+      padding: 3.5rem 0 11rem;
+  }  
   .title {
-    margin: 0 0 2rem;
-    font-size: 2.1rem;
-    font-weight: 300;
-    color: var(--text-light-color);
-  }
-  
+      color: var(--text-light-color);
+      font-size: 2.1rem;
+      font-weight: 300;
+      margin: 0 0 2rem;
+  }  
   .title span {
-    font-weight: 700;
-    color: var(--text-dark-color);
-  }
-  
+      color: var(--text-dark-color);
+      font-weight: 700;
+  }  
   .cta-text {
-    margin-bottom: 3.2rem;
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: var(--text-dark-color);
-  }
-  
+      color: var(--text-dark-color);
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-bottom: 3.2rem;
+  }  
   .input-container {
-    position: relative;
-    margin-bottom: 7rem;
-    gap: 1rem;
-  }
-  
+      gap: 1rem;
+      margin-bottom: 7rem;
+      position: relative;
+  }  
   .email {
-    width: 28.1rem;
-    height: 4rem;
-    padding-left: 3rem;
-    border-radius: 2.5rem;
-    border: 0.1rem solid var(--light-border-color);
-    font-size: 1.2rem;
-  }
-  
+      border-radius: 2.5rem;
+      border: 0.1rem solid var(--light-border-color);
+      font-size: 1.2rem;
+      height: 4rem;
+      padding-left: 3rem;
+      width: 28.1rem;
+  }  
   .email.border {
-    border: 0.1rem solid var(--error-color);
-  }
-  
+      border: 0.1rem solid var(--error-color);
+  }  
   .email.success {
-    border: 0.1rem solid green;
-  }
-  
+      border: 0.1rem solid green;
+  }  
   .email:focus {
-    color: var(--text-dark-color);
-  }
-  
+      color: var(--text-dark-color);
+  }  
   .error-message {
-    position: absolute;
-    bottom: 3rem;
-    font-size: 1rem;
-    font-weight: 300;
-    font-style: italic;
-    color: var(--error-color);
-    visibility: hidden;
-  }
-  
+      bottom: 3rem;
+      color: var(--error-color);
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 300;
+      position: absolute;
+      visibility: hidden;
+  }  
   .error-message.error {
-    visibility: visible;
-    position: relative;
-    bottom: 0;
-    margin-bottom: 1.8rem;
-  }
-  
+      bottom: 0;
+      margin-bottom: 1.8rem;
+      position: relative;
+      visibility: visible;
+  }  
   .submit-button {
-    width: 28.1rem;
-    height: 4rem;
-    border-radius: 2.5rem;
-    border: none;
-    background: var(--button-color);
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #FFFFFF;
-    box-shadow: rgba(79, 125, 243, 0.2) 0px 7px 6px 0px;
-  }
-  
+      background: var(--button-color);
+      border-radius: 2.5rem;
+      border: none;
+      box-shadow: rgba(79, 125, 243, 0.2) 0px 7px 6px 0px;
+      color: #FFFFFF;
+      font-size: 1.2rem;
+      font-weight: 600;
+      height: 4rem;
+      width: 28.1rem;
+  }  
   .submit-button:hover {
-    cursor: pointer;
-    background: #7195f5;
-  }
-  
+      background: #7195f5;
+      cursor: pointer;
+  }  
   .hero-img {
-    width: 32.1rem;
-    height: 19.5rem;
-  }
-  
+      height: 19.5rem;
+      width: 32.1rem;
+  }  
   footer, .social-icons, .icons-container {
-    justify-content: center;
-  }
-  
+      justify-content: center;
+  }  
   footer {
-    padding-top: 0.8rem;
-  }
-  
+      padding-top: 0.8rem;
+  }  
   .social-icons {
-    margin-bottom: 2.9rem;
-    flex-direction: row;
-    gap: 1.2rem;
-  }
-  
+      flex-direction: row;
+      gap: 1.2rem;
+      margin-bottom: 2.9rem;
+  }  
   .icons-container {
-    width: 3.1rem;
-    height: 3.1rem;
-    border-radius: 50%;
-    border: 0.1rem solid var(--light-border-color);
-  }
-  
+      border-radius: 50%;
+      border: 0.1rem solid var(--light-border-color);
+      height: 3.1rem;
+      width: 3.1rem;
+  }  
   .icons-container:hover {
-    border: none;
-    background: var(--button-color);
-  }
-  
+      background: var(--button-color);
+      border: none;
+  }  
   .social-logo {
-    filter: invert(39%) sepia(81%) saturate(2594%) hue-rotate(212deg) brightness(106%) contrast(91%);
-  }
-  
+      filter: invert(39%) sepia(81%) saturate(2594%) hue-rotate(212deg) brightness(106%) contrast(91%);
+  }  
   .social-logo:hover {
-    filter: brightness(0) invert(1);
-  }
-  
+      filter: brightness(0) invert(1);
+  }  
   .fb-logo {
-    width: 0.9rem;
-    height: 1.5rem;
-  }
-  
+      height: 1.5rem;
+      width: 0.9rem;
+  }  
   .tw-logo {
-    width: 1.3rem;
-    height: 1.2rem;
-  }
-  
+      height: 1.2rem;
+      width: 1.3rem;
+  }  
   .ig-logo {
-    width: 1.6rem;
-    height: 1.5rem;
-  }
-  
+      height: 1.5rem;
+      width: 1.6rem;
+  }  
   .copyright, .attribution {
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--text-light-color);
-  }
-  
+      color: var(--text-light-color);
+      font-size: 1rem;
+      font-weight: 300;
+  }  
   .copyright {
-    margin-bottom: 1.1rem;
-  }
-  
+      margin-bottom: 1.1rem;
+  }  
   .attribution a {
-    color: var(--text-dark-color);
-  }
-  
+      color: var(--text-dark-color);
+  }  
   .attribution a:hover {
-    font-weight: 600;
-  }
-  
+      font-weight: 600;
+  }  
   @media only screen and (min-width: 750px) {
     header {
-      height: 12rem;
+        height: 12rem;
     }
-  
     .logo {
-      width: 8.6rem;
-      height: 2.4rem;
+        height: 2.4rem;
+        width: 8.6rem;
     }
-  
     section {
-      padding: 5rem 0 6.1rem;
+        padding: 5rem 0 6.1rem;
     }
-  
     .title {
-      margin: 0 0 2.3rem;
-      font-size: 4.7rem;
+        font-size: 4.7rem;
+        margin: 0 0 2.3rem;
     }
-  
     .cta-text {
-      margin-bottom: 4rem;
-      font-size: 2rem;
+        font-size: 2rem;
+        margin-bottom: 4rem;
     }
-  
     .input-container {
-      margin-bottom: 9rem;
-      flex-direction: row;
-      gap: 1.6rem;
+        flex-direction: row;
+        gap: 1.6rem;
+        margin-bottom: 9rem;
     }
-  
     .email {
-      width: 42.1rem;
-      height: 5.6rem;
-      font-size: 1.5rem;
+        font-size: 1.5rem;
+        height: 5.6rem;
+        width: 42.1rem;
     }
-  
     .error-message {
-      font-size: 1.1rem;
+        font-size: 1.1rem;
     }
-  
     .error-message.error {
-      position: absolute;
-      bottom: -24px;
-      left: 46px;
-      margin-bottom: 0;
+        bottom: -24px;
+        left: 46px;
+        margin-bottom: 0;
+        position: absolute;
     }
-  
     .submit-button {
-      width: 20rem;
-      height: 5.6rem;
-      font-size: 1.5rem;
+        font-size: 1.5rem;
+        height: 5.6rem;
+        width: 20rem;
     }
-  
     .hero-img {
-      width: 64.1rem;
-      height: 38.8rem;
+        height: 38.8rem;
+        width: 64.1rem;
     }
-  
     footer {
-      padding-top: 1rem;
+        padding-top: 1rem;
     }
-  
     .social-icons {
-      gap: 1.3rem;
+        gap: 1.3rem;
     }
-  
     .copyright {
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
     }
   }

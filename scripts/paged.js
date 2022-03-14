@@ -1,4 +1,3 @@
-/* eslint-disable semi */
 // const     q     =       document.querySelector(    'p'     );
 const p = document.querySelector('p');
 /*
@@ -10,7 +9,6 @@ const p = document.querySelector('p');
 const city = 'Chennai';
 console.log(city);
 const age = 100;
-// eslint-disable-next-line no-undef
 console.log(q);
 console.log(p);
 console.log(age);

@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pagej</title>
 </head>
+
 <body>
     <div id='max'></div>
     <p></p>
     <div id='min'></div>
-        <script type="text/javascript">
-            document.getElementById('max').innerHTML =`Max:${Number.MAX_VALUE}`;
-            document.getElementById('min').innerHTML =`Min:${Number.MIN_VALUE}`;
-const x =100;
-let s1 ='hello';
-let result =x/s1;
-document.writeln(`<p>result ${result}`);
-document.writeln(`<p>isNaN(x/s1) ${isNaN(x/s1)}</p>`);
-const y=0;
-const z=x/y;
-document.writeln(`<P>z = ${z}</p>`);
-s1=null;
-document.writeln(`<P>s1 = ${s1}</p>`);
-function checknull_undefined(saythis) {
-    if (saythis ===undefined) {
-        saythis ='value is undefined';
-    }else if (saythis === null) {
-        saythis ='the value is null';
-    }
-    console.log(saythis);
-}
-checknull_undefined(s1);
-let s2;
-checknull_undefined(s2);
+    <script type="text/javascript">
+        document.getElementById('max').innerHTML = `Max:${Number.MAX_VALUE}`;
+        document.getElementById('min').innerHTML = `Min:${Number.MIN_VALUE}`;
+        const x = 100;
+        let s1 = 'hello';
+        let result = x / s1;
+        document.writeln(`<p>result ${result}`);
+        document.writeln(`<p>isNaN(x/s1) ${isNaN(x / s1)}</p>`);
+        const y = 0;
+        const z = x / y;
+        document.writeln(`<P>z = ${z}</p>`);
+        s1 = null;
+        document.writeln(`<P>s1 = ${s1}</p>`);
+        function checknull_undefined(saythis) {
+            if (saythis === undefined) {
+                saythis = 'value is undefined';
+            } else if (saythis === null) {
+                saythis = 'the value is null';
+            }
+            console.log(saythis);
+        }
+        checknull_undefined(s1);
+        let s2;
+        checknull_undefined(s2);
 
-        </script>
-    
+    </script>
+
 </body>
+
 </html>

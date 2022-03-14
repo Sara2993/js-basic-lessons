@@ -10,13 +10,11 @@ const cardBody = document.getElementById("card-body")
 const cardEmpty = document.querySelector('.card-empty')
 const cardFull = document.querySelector('.card-full')
 const deleteItem = document.getElementById('delete')
-
 let loopQty = () => {
      for(let i = 0; i < quantity.length; i++) {
         quantity[i].textContent = count 
     }
 }
- 
 plus.addEventListener("click", e => { 
     count++
     loopQty()
@@ -37,7 +35,6 @@ addToCart.addEventListener('click', e=> {
         badge.style.display = "block"
     } 
 })
-
 deleteItem.addEventListener("click", e=> {
     cardFull.style.display = "none"
     cardEmpty.style.display = "block"

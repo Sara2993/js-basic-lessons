@@ -1,136 +1,170 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; }
-  
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }  
   body {
-    font-size: 16px;
-    height: 100vh;
-    font-family: "Josefin Sans", sans-serif; }
-  
+      font-family: "Josefin Sans", sans-serif;
+      font-size: 16px;
+      height: 100vh;
+  }  
   #page {
-    background-image: url("../images/bg-pattern-desktop.svg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%; }
+      align-items: center;
+      background-image: url("../images/bg-pattern-desktop.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      height: 100%;
+      justify-content: space-between;
+  }
     #page #info {
-      width: 50%;
-      padding: 40px 50px; }
+        padding: 40px 50px;
+        width: 50%;
+    }
       #page #info .logo {
-        margin-bottom: 100px; }
+          margin-bottom: 100px;
+      }
       #page #info .mobile-img {
-        width: 100%;
-        display: none;
-        margin-bottom: 40px; }
-        #page #info .mobile-img img {
-          width: 100%; }
-      #page #info .title {
-        margin-bottom: 15px; }
-        #page #info .title h1 {
-          font-size: 3em;
-          font-weight: bold;
-          text-transform: uppercase;
-          letter-spacing: 6px; }
-          #page #info .title h1 span {
-            font-weight: 300;
-            color: #ce9797; }
-      #page #info .disc {
-        margin-bottom: 20px; }
-        #page #info .disc p {
-          font-size: 0.8em;
-          font-weight: 400;
-          color: #ce9797;
-          line-height: 20px; }
-      #page #info .form-container #form {
-        position: relative; }
-        #page #info .form-container #form #email {
+          display: none;
+          margin-bottom: 40px;
           width: 100%;
-          border: 0.5px solid #413a3a;
-          outline: none;
-          border-radius: 30px;
-          padding: 12px;
-          color: black; }
+      }
+        #page #info .mobile-img img {
+            width: 100%;
+        }
+      #page #info .title {
+          margin-bottom: 15px;
+      }
+        #page #info .title h1 {
+            font-size: 3em;
+            font-weight: bold;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+        }
+          #page #info .title h1 span {
+              color: #ce9797;
+              font-weight: 300;
+          }
+      #page #info .disc {
+          margin-bottom: 20px;
+      }
+        #page #info .disc p {
+            color: #ce9797;
+            font-size: 0.8em;
+            font-weight: 400;
+            line-height: 20px;
+        }
+      #page #info .form-container #form {
+          position: relative;
+      }
+        #page #info .form-container #form #email {
+            border-radius: 30px;
+            border: 0.5px solid #413a3a;
+            color: black;
+            outline: none;
+            padding: 12px;
+            width: 100%;
+        }
         #page #info .form-container #form .error {
-          position: absolute;
-          top: 8px;
-          right: 100px;
-          display: none; }
+            display: none;
+            position: absolute;
+            right: 100px;
+            top: 8px;
+        }
         #page #info .form-container #form .button {
-          outline: none;
-          border: none;
-          width: 60px;
-          height: 42px;
-          border-radius: 30px;
-          position: absolute;
-          top: -1px;
-          right: 0;
-          cursor: pointer;
-          background: linear-gradient(135deg, #debaba, #ee8c8c); }
+            background: linear-gradient(135deg, #debaba, #ee8c8c);
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            height: 42px;
+            outline: none;
+            position: absolute;
+            right: 0;
+            top: -1px;
+            width: 60px;
+        }
         #page #info .form-container #form .button:hover {
-          box-shadow: 6px 0.5em 0.5em #debaba; }
+            box-shadow: 6px 0.5em 0.5em #debaba;
+        }
         #page #info .form-container #form .arrow {
-          position: absolute;
-          top: 10px;
-          right: 19px;
-          z-index: 11; }
+            position: absolute;
+            right: 19px;
+            top: 10px;
+            z-index: 11;
+        }
     #page #image {
-      width: 50%;
-      padding: 40px 50px; }
+        padding: 40px 50px;
+        width: 50%;
+    }
       #page #image img {
-        width: 100%;
-        padding: 40px 50px; }
-  
+          padding: 40px 50px;
+          width: 100%;
+      }  
   @media screen and (max-width: 900px) {
     #page #info {
-      padding: 20px 20px; }
+        padding: 20px 20px;
+    }
       #page #info .logo {
-        margin-bottom: 50px; }
+          margin-bottom: 50px;
+      }
     #page #image {
-      width: 50%;
-      padding: 20px 20px; }
+        padding: 20px 20px;
+        width: 50%;
+    }
       #page #image img {
-        padding: 0; } }
+          padding: 0;
+      }
+  }
   @media screen and (max-width: 600px) {
     #page {
-      width: 100%;
-      display: block;
-      height: auto;
-      padding: 20px; }
+        display: block;
+        height: auto;
+        padding: 20px;
+        width: 100%;
+    }
       #page > div {
-        width: 100%;
-        height: auto; }
+          height: auto;
+          width: 100%;
+      }
       #page #info {
-        width: 100%;
-        padding: 40px 0;
-        text-align: center; }
+          padding: 40px 0;
+          text-align: center;
+          width: 100%;
+      }
         #page #info #container #page #info .logo {
-          margin-bottom: 20px; }
+            margin-bottom: 20px;
+        }
         #page #info .mobile-img {
-          display: block; }
+            display: block;
+        }
         #page #info .form-container #form {
-          padding-left: 30px;
-          padding-right: 30px; }
+            padding-left: 30px;
+            padding-right: 30px;
+        }
           #page #info .form-container #form button {
-            right: 30px; }
+              right: 30px;
+          }
         #page #info .disc {
-          padding-left: 30px;
-          padding-right: 30px; }
+            padding-left: 30px;
+            padding-right: 30px;
+        }
       #page #image {
-        display: none; } }
+          display: none;
+      }
+  }
   .msg-error {
-    font-size: 0.8em;
-    color: #ee8c8c;
-    font-weight: 400;
-    margin-left: 15px;
-    margin-top: 10px;
-    display: none; }
-  
+      color: #ee8c8c;
+      display: none;
+      font-size: 0.8em;
+      font-weight: 400;
+      margin-left: 15px;
+      margin-top: 10px;
+  }  
   .attribution {
-    font-size: 11px;
-    text-align: center; }
+      font-size: 11px;
+      text-align: center;
+  }
     .attribution a {
-      color: #3e52a3; }
+        color: #3e52a3;
+    }
   

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js</title>
 </head>
+
 <body>
     <script>
         let thisIsAString = 'This is a string';
@@ -28,34 +30,36 @@
         console.log(isTrue);
         let isFalse = false;
         console.log(isFalse);
-        let isArray =[100,'one',200,300,400,500];
+        let isArray = [100, 'one', 200, 300, 400, 500];
         console.log(isArray);
         let valueFromarray = isArray[4];
         console.log(valueFromarray);
         let isObject = {
             'color': 'blue',
             'dog': 'bark',
-            'array':[0,1,2,3,4,5],
-            'myfunc': function (){
+            'array': [0, 1, 2, 3, 4, 5],
+            'myfunc': function () {
                 console.log('do something!');
             }
         }
-        let dog1 =isObject.dog;
+        let dog1 = isObject.dog;
         console.log(dog1);
         isObject.myfunc();
 
-        let funcA =function() { return "to day is a good day"; }
-        let funcB =function() { return 100+200;
+        let funcA = function () { return "to day is a good day"; }
+        let funcB = function () {
+            return 100 + 200;
         }
         let resultA = funcA();
         console.log(resultA);
         let resultB = funcB();
         console.log(resultB);
-        const amount =20000;
+        const amount = 20000;
         const toDisplay = 'amount is rupees' + amount;
         console.log(toDisplay);
-        const vString =`amount is rupees:${amount}`;//interpollation
+        const vString = `amount is rupees:${amount}`;//interpollation
         console.log(vString);
     </script>
 </body>
+
 </html>

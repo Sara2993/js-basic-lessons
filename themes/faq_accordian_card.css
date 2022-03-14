@@ -1,21 +1,12 @@
 :root {
-    /* text-Primary */
     --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
     --Soft-red: hsl(14, 88%, 65%);
-  
-    /* Background gradient */
-  
     --Soft-violet: hsl(273, 75%, 66%);
     --Soft-blue: hsl(240, 73%, 65%);
-  
-    /* text-neutral */
     --Very-dark-grayish-blue: hsl(237, 12%, 33%);
     --Dark-grayish-blue: hsl(240, 6%, 50%);
-  
-    /* Dividers */
     --Light-grayish-blue: hsl(240, 5%, 91%);
   }
-  
   body {
     font-family: "Kumbh Sans", sans-serif;
     font-size: 12px;
@@ -32,34 +23,30 @@
     align-content: center;
     justify-content: center;
   }
-  
   #container {
     margin: 0 auto;
     box-sizing: border-box;
     width: min(920px, 90vw);
   }
-  
   .card {
     display: grid;
     grid-template-columns: 40% 60%;
-    /* margin-top: 86px;
-    margin-bottom: 86px; */
+    margin-bottom: 86px; 
     background-color: white;
     border-radius: 20px;
-    /* align-items: center; */
     position: relative;
   }
   
   .card-img {
-    background-image: url(./illustration-woman-online-desktop.svg),
-      url(./bg-pattern-desktop\ \(1\).svg);
+    background-image: url(../images/illustration-woman-online-desktop.svg),
+      url(../images/bg-pattern-desktop\ \(1\).svg);
     background-repeat: no-repeat;
     background-size: 120% auto, auto 120%;
     background-position: right center;
   }
   
   .card-img::after {
-    content: url(./illustration-box-desktop.svg);
+    content: url(../images/illustration-box-desktop.svg);
     transform: translate(-50%, 50%);
     position: absolute;
     bottom: 50%;
@@ -126,14 +113,14 @@
     }
   
     .card-img {
-      background-image: url(./bg-pattern-mobile.svg);
+      background-image: url(../images/bg-pattern-mobile.svg);
       background-position: center top;
       padding-top: calc((104 / 240) * 100%);
       background-size: 80% auto;
     }
   
     .card-img::after {
-      content: url(./illustration-woman-online-mobile.svg);
+      content: url(../images/illustration-woman-online-mobile.svg);
       left: 50%;
       transform: translate(-50%, -60%);
       width: 80%;
