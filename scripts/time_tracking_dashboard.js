@@ -26,8 +26,12 @@
   	(() => {
     	__webpack_require__.r = (exports) => {
      			if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-        				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' })
-      		Object.defineProperty(exports, '__esModule', { value: true })
+        				Object.defineProperty(exports, Symbol.toStringTag, { 
+							value: 'Module',
+						 });
     	}
-    })()
-})()
+	Object.defineProperty(exports, '__esModule', { value: true });
+	};
+    })();
+	
+})();
