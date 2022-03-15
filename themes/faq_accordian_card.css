@@ -1,134 +1,122 @@
 :root {
-    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
-    --Soft-red: hsl(14, 88%, 65%);
-    --Soft-violet: hsl(273, 75%, 66%);
-    --Soft-blue: hsl(240, 73%, 65%);
-    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
-    --Dark-grayish-blue: hsl(240, 6%, 50%);
-    --Light-grayish-blue: hsl(240, 5%, 91%);
+      --Dark-grayish-blue: hsl(240, 6%, 50%);
+      --Light-grayish-blue: hsl(240, 5%, 91%);
+      --Soft-blue: hsl(240, 73%, 65%);
+      --Soft-red: hsl(14, 88%, 65%);
+      --Soft-violet: hsl(273, 75%, 66%);
+      --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+      --Very-dark-grayish-blue: hsl(237, 12%, 33%);
   }
   body {
-    font-family: "Kumbh Sans", sans-serif;
-    font-size: 12px;
-    color: var(--Very-dark-grayish-blue);
-    background-image: linear-gradient(
-      to bottom left,
-      var(--Soft-violet),
-      var(--Soft-blue)
-    );
-    background-repeat: no-repeat;
-    margin: 0;
-    min-height: 100vh;
-    display: grid;
-    align-content: center;
-    justify-content: center;
+      align-content: center;
+      background-image: linear-gradient(
+        to bottom left,
+        var(--Soft-violet),
+        var(--Soft-blue)
+      );
+      background-repeat: no-repeat;
+      color: var(--Very-dark-grayish-blue);
+      display: grid;
+      font-family: "Kumbh Sans", sans-serif;
+      font-size: 12px;
+      justify-content: center;
+      margin: 0;
+      min-height: 100vh;
   }
   #container {
-    margin: 0 auto;
-    box-sizing: border-box;
-    width: min(920px, 90vw);
+      box-sizing: border-box;
+      margin: 0 auto;
+      width: min(920px, 90vw);
   }
   .card {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    margin-bottom: 86px; 
-    background-color: white;
-    border-radius: 20px;
-    position: relative;
-  }
-  
+      background-color: white;
+      border-radius: 20px;
+      display: grid;
+      grid-template-columns: 40% 60%;
+      margin-bottom: 86px;
+      position: relative;
+  }  
   .card-img {
-    background-image: url(../images/illustration-woman-online-desktop.svg),
-      url(../images/bg-pattern-desktop\ \(1\).svg);
-    background-repeat: no-repeat;
-    background-size: 120% auto, auto 120%;
-    background-position: right center;
-  }
-  
+      background-image: url(../images/illustration-woman-online-desktop.svg);
+      background-position: right center;
+      background-repeat: no-repeat;
+      background-size: 120% auto, auto 120%;
+      background-image: url(../images/bg-pattern-desktop\ \(1\).svg);
+  }  
   .card-img::after {
-    content: url(../images/illustration-box-desktop.svg);
-    transform: translate(-50%, 50%);
-    position: absolute;
-    bottom: 50%;
-  }
-  
+      bottom: 50%;
+      content: url(../images/illustration-box-desktop.svg);
+      position: absolute;
+      transform: translate(-50%, 50%);
+  }  
   .questions {
-    background-color: white;
-    color: var(--Dark-grayish-blue);
-    cursor: pointer;
-    padding: 0px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 14px;
-    transition: 0.4s;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--Light-grayish-blue);
-    margin: 0 auto;
-    gap: 1rem;
-  }
-  
+      align-items: center;
+      background-color: white;
+      border-bottom: 1px solid var(--Light-grayish-blue);
+      border: none;
+      color: var(--Dark-grayish-blue);
+      cursor: pointer;
+      display: flex;
+      font-size: 14px;
+      gap: 1rem;
+      justify-content: space-between;
+      margin: 0 auto;
+      outline: none;
+      padding: 0px;
+      text-align: left;
+      transition: 0.4s;
+      width: 100%;
+  }  
   .questions:hover {
-    color: var(--Soft-red);
-    cursor: pointer;
-  }
-  
+      color: var(--Soft-red);
+      cursor: pointer;
+  }  
   .active,
   .accordion:hover {
-    background-color: white;
-    color: var(--Very-dark-desaturated-blue);
-  }
-  
+      background-color: white;
+      color: var(--Very-dark-desaturated-blue);
+  }  
   .answer {
-    display: none;
-    background-color: white;
-    overflow: hidden;
-  }
-  
+      background-color: white;
+      display: none;
+      overflow: hidden;
+  }  
   .answer-p {
-    width: 45ch;
-    display: inline-block;
-  }
-  
+      display: inline-block;
+      width: 45ch;
+  }  
   .card-title {
-    font-size: 30px;
-    padding: 18px;
-    margin: 0;
-    text-align: center;
-  }
-  
+      font-size: 30px;
+      margin: 0;
+      padding: 18px;
+      text-align: center;
+  }  
   .card-question {
-    display: block;
-    padding: 48px 72px;
-  }
-  
-  @media only screen and (max-width: 1124px) {
-    .card {
       display: block;
-      margin-top: 120px;
-      margin-top: 35vw;
+      padding: 48px 72px;
+  }  
+  @media only screen and (max-width: 1124px) {
+      card-img::after {
+        bottom: unset;
+        content: url(../images/illustration-woman-online-mobile.svg);
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -60%);
+        width: 80%;
     }
-  
+
+    .card {
+        display: block;
+        margin-top: 120px;
+        margin-top: 35vw;
+    }
     .card-img {
-      background-image: url(../images/bg-pattern-mobile.svg);
-      background-position: center top;
-      padding-top: calc((104 / 240) * 100%);
-      background-size: 80% auto;
+        background-image: url(../images/bg-pattern-mobile.svg);
+        background-position: center top;
+        background-size: 80% auto;
+        padding-top: calc((104 / 240) * 100%);
     }
-  
-    .card-img::after {
-      content: url(../images/illustration-woman-online-mobile.svg);
-      left: 50%;
-      transform: translate(-50%, -60%);
-      width: 80%;
-      bottom: unset;
-      top: 0;
-    }
-  
     .card-question {
-      padding: 0px 24px 48px;
+        padding: 0px 24px 48px;
     }
   }
