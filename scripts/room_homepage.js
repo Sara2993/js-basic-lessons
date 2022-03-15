@@ -67,8 +67,8 @@ closeIcon.onclick = () => {
     filter.style['pointer-events'] = 'none';
 }
 const photos = document.querySelectorAll('.slider>ul img');
-const imagesDesk = ['./desk-1.jpg', './desk-2.jpg', './desk-3.jpg'];
-const imagesMobile = ['./mobile-1.jpg', './mobile-2.jpg', './mobile-3.jpg'];
+const imagesDesk = ['../images/desk-1.jpg', '../images/desk-2.jpg', '../images/desk-3.jpg'];
+const imagesMobile = ['../images/mobile-1.jpg', '../images/mobile-2.jpg', '../images/mobile-3.jpg'];
 function setImages() {
     let n = 0;
     if (document.body.clientWidth >= 700) {
