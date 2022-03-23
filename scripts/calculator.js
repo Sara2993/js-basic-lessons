@@ -1,146 +1,80 @@
-d.addEventListener('DOMContentLoaded', (e) => {
-  calculateTip('#tip5', '#tip10', '#tip15', '#tip25', '#tip50', '#reset')
-})
-const bill = document.getElementById('bill')
-const tip5 = document.getElementById('tip5')
-const tip10 = document.getElementById('tip10')
-const tip15 = document.getElementById('tip15')
-const tip25 = document.getElementById('tip25')
-const tip50 = document.getElementById('tip50')
-const reset = document.getElementById('reset')
-const inpPeople = document.getElementById('inpPeople')
-const customTips = document.getElementById('custom')
-function calculateTip (tip5, tip10, tip15, tip25, tip50, reset) {
-  const d = document
-  d.addEventListener('click', (e) => {
-    function showError () {
-      if (bill.value === '') {
-        const billError = document.getElementById('billError')
+const billInput=document.querySelector('.bill-input');
+const peopleInput=document.querySelector('.people-input');
+const tipPerPerson=document.getElementById('tip-amount');
+const totalPerPerson=document.getElementById('total-amount');
+const tips=document.querySelectorAll(".tips");
+const tipCustom=document.querySelector('.tip-custom');
+const resetBtn=document.querySelector('.reset');
+const error=document.querySelector(".error");
 
-        billError.style.display = 'block'
-        bill.style.border = '1px solid red'
-        inpPeople.style.border = '1px solid red'
 
-        const time = setTimeout(() => {
-          billError.style.display = 'none'
-          bill.style.border = 'none'
-          inpPeople.style.border = 'none'
-          clearTimeout(time)
-        }, 850)
-      } if (inpPeople.value === '') {
-        const peopleError = document.querySelector('.peopleError')
-        peopleError.style.display = 'block'
-        inpPeople.style.border = '1px solid red'
-        const twoTime = setTimeout(() => {
-          inpPeople.style.border = 'none'
-          peopleError.style.display = 'none'
-          clearTimeout(twoTime)
-        }, 850)
-      }
+
+billInput.addEventListener('input',billInputFun);
+peopleInput.addEventListener('input',peopleInputFun);
+tips.forEach(function(val){
+    val.addEventListener("click",handleClick);
+});
+tipCustom.addEventListener("input",tipInputFun);
+resetBtn.addEventListener('click',reset);
+
+billInput.value='0.0';
+peopleInput.value='1';
+tipPerPerson.innerHTML="$"+ (0.0).toFixed(2);
+totalPerPerson.innerHTML="$"+ (0.0).toFixed(2);
+
+let billValue=0.0;
+let peopleValue=1;
+let tipvalue=0.15;
+
+function  billInputFun(){
+    billValue=parseFloat(billInput.value);
+    calculateTip();
+}
+function  peopleInputFun(){
+    peopleValue=parseFloat(peopleInput.value);
+    calculateTip();
+
+    if(peopleValue <1){
+        error.style.display='flex';
+        peopleInput.style.border='thick solid red'
+    }else{
+        error.style.display='none';
+        peopleInput.style.border='none'
+        calculateTip();
     }
-    if (e.target.matches(tip5)) {
-      if (bill.value === '' || inpPeople.value === '') {
-        showError()
-      } if (bill.value && inpPeople.value) {
-        const resultado = (bill.value * 5) / 100
-        const resultado2 = resultado
-        const a = parseInt(resultado) 
-        const b = parseInt(resultado2) / inpPeople.value 
+}
 
-        document.querySelector('.textDiv').innerHTML = a + ',00'
-        document.querySelector('.secondTextDiv').innerHTML = b + ',00'
-      }
-    } if (e.target.matches(tip10)) {
-      if (bill.value === '' || inpPeople.value === '') {
-        showError()
-      } if (bill.value && inpPeople.value) {
-        const resultado = (bill.value * 10) / 100
-        const resultado2 = resultado
-        const a = parseInt(resultado) 
-        const b = parseInt(resultado2) / inpPeople.value 
+function tipInputFun(){
+    tipvalue=parseFloat(tipCustom.value/100);
+    tips.forEach(function(val){
 
-        document.querySelector('.textDiv').innerHTML = a + ',00'
-        document.querySelector('.secondTextDiv').innerHTML = b + ',00'
-      }
-    } if (e.target.matches(tip15)) {
-      if (bill.value === '' || inpPeople.value === '') {
-        showError()
-      } if (bill.value && inpPeople.value) {
-        const resultado = (bill.value * 15) / 100
-        const resultado2 = resultado
-        const a = parseInt(resultado) 
-        const b = parseInt(resultado2) / inpPeople.value 
+    });
+    calculateTip();
+}
+function handleClick(event){
+    tips.forEach(function(val){
+        val.classList.remove("active-tip");
 
-        document.querySelector('.textDiv').innerHTML = a + ',00'
-        document.querySelector('.secondTextDiv').innerHTML = b + ',00'
-      }
-    } if (e.target.matches(tip25)) {
-      if (bill.value === '' || inpPeople.value === '') {
-        showError()
-      } if (bill.value && inpPeople.value) {
-        const resultado = (bill.value * 25) / 100
-        const resultado2 = resultado
-        const a = parseInt(resultado)
-        const b = parseInt(resultado2) / inpPeople.value 
+        if(event.target.innerHTML == val.innerHTML){
+            val.classList.add("active-tip");
+            tipvalue=parseFloat(val.innerHTML)/100;
+        }
+    });
+    calculateTip();
+}
+function calculateTip(){
+    if(peopleValue >=1){
+        let tipAmount=(billValue * tipvalue) /peopleValue;
+        let total=(billValue * tipAmount) / peopleValue;
+        tipPerPerson.innerHTML="$"+ tipAmount.toFixed(2);
+        totalPerPerson.innerHTML="$"+ total.toFixed(2);
 
-        document.querySelector('.textDiv').innerHTML = a + ',00'
-        document.querySelector('.secondTextDiv').innerHTML = b + ',00'
-      }
-    } if (e.target.matches(tip50)) {
-      if (bill.value === '' || inpPeople.value === '') {
-        showError()
-      } if (bill.value && inpPeople.value) {
-        const resultado = (bill.value * 50) / 100
-        const resultado2 = resultado
-        const a = parseInt(resultado) 
-        const b = parseInt(resultado2) / inpPeople.value 
-
-        document.querySelector('.textDiv').innerHTML = a + ',00'
-        document.querySelector('.secondTextDiv').innerHTML = b + ',00'
-      }
-    } if (e.target.matches(reset)) {
-      bill.value = 0
-      inpPeople.value = 0
-      document.getElementById('div1').innerHTML = '$0,00'
-      document.getElementById('div2').innerHTML = '$0,00'
     }
-  })
-
-  customTips.addEventListener('keyup', (e) => {
-    if (bill.value === '') {
-      const billError = document.getElementById('billError')
-
-      billError.style.display = 'block'
-      bill.style.border = '1px solid red'
-
-      const time = setTimeout(() => {
-        billError.style.display = 'none'
-        bill.style.border = 'none'
-        inpPeople.style.border = 'none'
-        clearTimeout(time)
-      }, 850)
-    } if (inpPeople.value === '') {
-      const peopleError = document.querySelector('.peopleError')
-      peopleError.style.display = 'block'
-      inpPeople.style.border = '1px solid red'
-
-      const twoTime = setTimeout(() => {
-        inpPeople.style.border = 'none'
-        peopleError.style.display = 'none'
-        clearTimeout(twoTime)
-      }, 850)
-    }
-    const customTips = e.target.value
-
-    const f = parseInt(customTips)
-    const g = parseInt(inpPeople.value)
-
-    const tipResult = (bill.value * f) / 100
-
-    const a = parseInt(tipResult)
-    const b = parseInt(tipResult / g)
-
-    document.querySelector('.textDiv').innerHTML = tipResult + ',00'
-    document.querySelector('.secondTextDiv').innerHTML = b + ',00'
-  })
+}
+function reset(){
+    billInput.value='0.0';
+    billInputFun()
+    peopleInput.value='1';
+    peopleInputFun()
+    tipCustom.value=""
 }

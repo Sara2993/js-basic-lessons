@@ -1,42 +1,18 @@
-const form = document.querySelector('#form');
-const email = document.querySelector('#email');
-const validEmailMessage = document.querySelector('#valid-email');
-const noEmailMessage = document.querySelector('#no-email');
-form.addEventListener('submit', e => {
-  e.preventDefault();
+'use strict';
 
-  validateEmail();
+const inputEmail=document.getElementById("input-email");
+const submitBtn=document.getElementById("submit-btn");
+const form=document.getElementById("form");
+
+submitBtn.addEventListener('click',(e) =>{
+    e.preventDefault();
+    const regEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if(inputEmail.value.match(regEx)){
+        console.log("valid");
+        form.classList.remove("error");
+    }else {
+        console.log("error");
+        form.classList.add("error");
+    }
 });
-const noEmailFunction = () => {
-  email.classList.add('border');
-  email.classList.remove('success');
-  noEmailMessage.classList.add('error');
-  validEmailMessage.classList.remove('error');
-}
-const validEmailFunction = () => {
-  email.classList.add('border');
-  email.classList.remove('success');
-  noEmailMessage.classList.remove('error');
-  validEmailMessage.classList.add('error');
-}
-const successEmailFunction = () => {
-  email.classList.remove('border');
-  email.classList.add('success');
-  noEmailMessage.classList.remove('error');
-  validEmailMessage.classList.remove('error');;
-}
-const isValidEmail = email => {
-  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-}
-const validateEmail = () => {
-  const emailValue = email.value.trim();
-
-  if (emailValue === '') {
-    noEmailFunction();
-  } else if (!isValidEmail(emailValue)) {
-    validEmailFunction();
-  } else {
-    successEmailFunction();
-  }
-}

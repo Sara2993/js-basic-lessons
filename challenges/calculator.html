@@ -1,99 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../themes/calculator.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&family=Lato:wght@900&family=Outfit:wght@300&family=Piazzolla:wght@100;200&display=swap"
-        rel="stylesheet">
-    <title> tip calculator app</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../themes/calculator.css"/>
+  <script defer src="../scripts/calculator.js"></script>
+  <title>Tip calculator app</title>
 </head>
-
 <body>
+         <div class="logo">
+             <img src="../images/logo (2).svg" alt=""/></div>
+  <div class="tip-calculator">
+      <div class="partOne">
+                    <label for="">Bill</label>
+                    <input type="number" class="input bill-input">
+                    <label for=""> Select Tip %</label>
 
-
-    <header>
-        <img class="logo" src="../images/logo (3).svg" alt="">
-    </header>
-
-
-    <main class="main">
-
-
-        <div class="div_main_container">
-
-            <div class="div_one_container">
-                <div class="div_number_bill">
-                    <p>Bill</p>
-                    <input class="imput_bill" id="bill" type="number">
-                    <div class="billError" id="billError">
-                        <span> Este campo no puede estar vacío </span>
-                    </div>
-                </div>
-
-                <div class="p_select_tip">
-                    <p>
-                    <p>Select Tip %</p>
-                    </p>
-                </div>
-
-                <div class="percentage_tip">
-                    <button class="perceTips" id="tip5">5%</button>
-                    <button class="perceTips" id="tip10">10%</button>
-                    <button class="perceTips" id="tip15">15%</button>
-                    <button class="perceTips" id="tip25">25%</button>
-                    <button class="perceTips" id="tip50">50%</button>
-                    <input class="customTips" type="number" id="custom" placeholder="Custom(% Tips)">
-                </div>
-
-                <div class="people_tips">
-                    <p>Waiters who receive tips</p>
-                    <input class="input_people" id="inpPeople" type="number" placeholder="0">
-                    <div>
-                        <span class="peopleError"> Este campo no puede estar vacío </span>
-                    </div>
-
-                </div>
-
+            <div class="tip">
+                <div class="tips tip-5">5%</div>
+                <div class="tips tip-10">10%</div>
+                <div class="tips tip-15 active-tip">15%</div>
+                <div class="tips tip-25">25%</div>
+                <div class="tips tip-50">50%</div>
+                <div id="tip-custom"><input type="number" class="tip-custom" placeholder="CUSTOM"></div>
             </div>
 
-
-            <div class="div_two_container">
-
-
-                <div class="div_two_tips">
-                    <div class="total_people">
-                        <p>Tip Amount</p>
-                        <span> / Person </span>
-
-                        <div class="total_people_two">
-                            <p>Total</p>
-                            <span> / Person </span>
-                        </div>
-
-                    </div>
-
-                    <div class="container_tips">
-                        <div class="textDiv" id="div1">$0,00</div>
-                        <div class="secondTextDiv" id="div2">$0,00</div>
-                    </div>
-                </div>
-
-
-                <div class="div_reset_buttom">
-                    <button class="buttom_reset" id="reset" type="submit"> Reset </button>
-                </div>
-
+            <div class="peopleLabel">
+                <label for="">Number of People</label>
+                <label for="" class="error">Can't be zero</label>
             </div>
-        </div>
-    </main>
 
-    <script src="../scripts/calculator.js"></script>
-</body>
+            <input type="number" class="input people-input">
+    </div>
 
+    <div class="result">
+            <div class="tip-amount">
+               <div class="text">
+                   <p>Tip Amount</p>
+                   <p class="person">/ person</p>
+               </div>
+               <div class="amount" id="tip-amount">$4.27</div>
+            </div>
+       
+      
+            <div class="total">
+               <div class="text">
+                 <p>Total</p>
+                 <p class="person">/ person</p>
+               </div>
+             <div class="amount" id="total-amount">$32.79</div>
+            </div>
+
+            <div class="reset">RESET</div>
+     </div>
+  </div>
+ </body>
 </html>
