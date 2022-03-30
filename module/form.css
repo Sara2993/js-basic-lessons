@@ -1,0 +1,106 @@
+* {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+  }
+    body {
+            background-attachment: fixed;
+            background-color: rgb(204, 229, 233);
+            background-image: url("../images/background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+     }
+    .heading {
+         color: rgb(49, 45, 45);
+         font-family: sans-serif;
+         margin: 40px;
+         padding-left: 40px;
+         text-align: center;
+  }
+    .form-container {
+        text-align: center;
+ }
+    div {
+         padding: 10px;
+  }
+    div input {
+         background-color: white;
+         border-radius: 20px;
+         border: none;
+         font-weight: 600;
+         height: 40px;
+         margin-left: 50px;
+         outline: none;
+         padding: 10px;
+         width: 350px;
+  }
+    .gender input,
+    .result input {
+        height: 20px;
+        margin-left: 40px;
+        width: 20px;
+ }
+    label {
+         color: rgb(9, 3, 34);
+         font-weight: 800;
+  }
+    .gender label {
+         margin-right: 10px;
+  }
+    .result label {
+         margin-right: 40px;
+  }
+    .name label {
+        margin-left: 40px;
+ }
+    .city label {
+        margin-left: 50px;
+ }
+    .report-num {
+         margin-right: 20px;
+  }
+    .lab-name {
+         margin-left: 20px;
+  }
+    .aadhar {
+         margin-right: 20px;
+  }
+    #add {
+         background-color: blue;
+         border-radius: 20px;
+         border: none;
+         color: rgb(249, 251, 252);
+         cursor: pointer;
+         font-weight: 600;
+         height: 40px;
+         outline: none;
+         width: 100px;
+  }
+  #search {
+      background-color: blue;
+      border-radius: 20px;
+      border: none;
+      color: rgb(249, 251, 252);
+      cursor: pointer;
+      font-weight: 600;
+      height: 40px;
+      outline: none;
+      width: 100px;
+}
+#display {
+      background-color: blue;
+      border-radius: 20px;
+      border: none;
+      color: rgb(249, 251, 252);
+      cursor: pointer;
+      font-weight: 600;
+      height: 40px;
+      outline: none;
+      width: 100px;
+}
+    table,th,tr {
+         border: 1px solid black;
+
+  }
+    
+    
