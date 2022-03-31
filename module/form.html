@@ -13,6 +13,7 @@
     <b>
         <h1 class="heading">RT-PCR TESTING FORM</h1>
     </b>
+    <div action="#" id="form" method="post">
     <div class="container">
         <div class="tab tab-2">
             <div class="field">
@@ -74,9 +75,10 @@
         <div class="search">
             <!-- <input type="text" id="find" onkeyup="myFunction()" onfocus="copy()" placeholder="Enter name to search"> -->
             <input type="text" id="find" onkeyup="reset()" placeholder="Enter name to search">
-            <input type="submit" onclick="myFunction()">
+            <input type="submit" id="submit" onclick="myFunction()">
             <div id="msg"></div>
         </div>
+    </form>
         <div class="tab tab-1">
             <table id="table" style="border: 1;">
                 <tr>

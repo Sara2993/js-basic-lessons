@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-count-display-component',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CountDisplayComponentComponent implements OnInit {
 
+  @Input()
+  count:number=0;
   constructor() { }
 
   ngOnInit(): void {
