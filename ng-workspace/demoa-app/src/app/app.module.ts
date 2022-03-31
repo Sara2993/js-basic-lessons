@@ -6,14 +6,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import {AppHeaderComponent} from './app.header.component';
 import { BoxaComponent } from './boxa/boxa.component';
-import { CustomerFormComponent } from './customer-form/customer-form.component'
+import { CustomerFormComponent } from './customer-form/customer-form.component';
+import { CountDisplayComponentComponent } from './count-display-component/count-display-component.component'
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AppHeaderComponent,
     BoxaComponent,
-    CustomerFormComponent
+    CustomerFormComponent,
+    CountDisplayComponentComponent
   ],//components,dirextives,pipes
   imports: [
     BrowserModule,
