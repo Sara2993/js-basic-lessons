@@ -1,0 +1,12 @@
+<div class="panel-heading">Counter App Component -{{totalCount}}
+
+</div>
+<div class="pane-body">
+    <app-hit-button [label]="hitIncrementValue" (hit)="increaseCount($event)">
+
+    </app-hit-button>
+
+    <app-count-display-component [count]="totalCount">
+
+    </app-count-display-component>
+</div>
