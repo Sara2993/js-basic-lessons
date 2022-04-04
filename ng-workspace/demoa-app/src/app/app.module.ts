@@ -9,20 +9,20 @@ import { BoxaComponent } from './boxa/boxa.component';
 import { CustomerFormComponent } from './customer-form/customer-form.component';
 import { CountDisplayComponentComponent } from './count-display-component/count-display-component.component';
 import { HitButtonComponent } from './hit-button/hit-button.component';
-// import { DisplayComponent } from './display/display.component';
+//import { DisplayComponent } from './display/display.component';
 import { CounterAppComponent } from './counter-app/counter-app.component';
-import { RtPcrComponent } from './rt-pcr/rt-pcr.component'
+ import { RtPcrComponent } from './rt-pcr/rt-pcr.component'
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AppHeaderComponent,
     BoxaComponent,
-    CustomerFormComponent,
+     CustomerFormComponent,
     CountDisplayComponentComponent,
     HitButtonComponent,
-    // DisplayComponent,
-    CounterAppComponent,
+     //DisplayComponent,
+     CounterAppComponent,
     RtPcrComponent
   ],//components,dirextives,pipes
   imports: [
@@ -33,6 +33,6 @@ import { RtPcrComponent } from './rt-pcr/rt-pcr.component'
   ],//import other dependent modules i.e other modules used
   //in the current module
   providers: [],//provide service to app root injector
-  bootstrap: [AppHeaderComponent,AppComponent,HomeComponent]
+  bootstrap: [AppComponent,AppHeaderComponent,HomeComponent]
 })
 export class AppModule { }
